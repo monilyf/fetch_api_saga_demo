@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import CounterApp from './src/screens/CounterApp'
 import FetchAPIApp from './src/screens/FetchAPIApp'
 import store from './src/redux/store'
+import { View } from 'react-native'
 
 // store=createStore(rootReducer)
 
@@ -13,8 +14,11 @@ import store from './src/redux/store'
    render() {
      return (
       <Provider store={store}>
-      <CounterApp/>
-      {/* <FetchAPIApp /> */}
+     <View>
+     <CounterApp/>
+      <FetchAPIApp />
+     </View>
+     
     </Provider>
      )
    }
